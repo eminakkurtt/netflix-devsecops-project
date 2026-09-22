@@ -1,0 +1,150 @@
+
+Report Summary
+
+┌───────────┬──────┬─────────────────┬─────────┐
+│  Target   │ Type │ Vulnerabilities │ Secrets │
+├───────────┼──────┼─────────────────┼─────────┤
+│ yarn.lock │ yarn │       34        │    -    │
+└───────────┴──────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+yarn.lock (yarn)
+================
+Total: 34 (UNKNOWN: 0, LOW: 2, MEDIUM: 11, HIGH: 21, CRITICAL: 0)
+
+┌───────────────────┬────────────────┬──────────┬────────┬───────────────────┬─────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│      Library      │ Vulnerability  │ Severity │ Status │ Installed Version │                      Fixed Version                      │                            Title                             │
+├───────────────────┼────────────────┼──────────┼────────┼───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ @babel/runtime    │ CVE-2025-27789 │ MEDIUM   │ fixed  │ 7.20.0            │ 7.26.10, 8.0.0-alpha.17                                 │ Babel has inefficient RegExp complexity in generated code    │
+│                   │                │          │        │                   │                                                         │ with .replace when transpiling...                            │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2025-27789                   │
+│                   │                │          │        ├───────────────────┤                                                         │                                                              │
+│                   │                │          │        │ 7.20.13           │                                                         │                                                              │
+│                   │                │          │        │                   │                                                         │                                                              │
+│                   │                │          │        │                   │                                                         │                                                              │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ @remix-run/router │ CVE-2026-22029 │ HIGH     │        │ 1.4.0             │ 1.23.2                                                  │ @remix-run/router: react-router: React Router vulnerable to  │
+│                   │                │          │        │                   │                                                         │ XSS via Open Redirects                                       │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-22029                   │
+│                   ├────────────────┼──────────┤        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-40181 │ MEDIUM   │        │                   │ 1.23.3                                                  │ react-router: React Router: Open redirect vulnerability via  │
+│                   │                │          │        │                   │                                                         │ specially crafted URLs                                       │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-40181                   │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ @xmldom/xmldom    │ CVE-2026-34601 │ HIGH     │        │ 0.8.6             │ 0.8.12, 0.9.9                                           │ xmldom: xmldom: XML structure injection via CDATA terminator │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-34601                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-41672 │          │        │                   │ 0.8.13, 0.9.10                                          │ xmldom: @xmldom/xmldom: xmldom: Arbitrary XML Node Injection │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-41672                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-41673 │          │        │                   │                                                         │ @xmldom/xmldom: xmldom: xmldom: Denial of Service via deeply │
+│                   │                │          │        │                   │                                                         │ nested XML documents                                         │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-41673                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-41674 │          │        │                   │                                                         │ xmldom: xmldom: Arbitrary XML markup injection               │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-41674                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-41675 │          │        │                   │                                                         │ xmldom: xmldom: Arbitrary XML node injection via crafted     │
+│                   │                │          │        │                   │                                                         │ processing instructions                                      │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-41675                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83605 │          │        │                   │ 0.9.11, 0.8.14                                          │ xmldom: @xmldom/xmldom: xmldom: Attribute injection allows   │
+│                   │                │          │        │                   │                                                         │ client-side script execution                                 │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83605                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83607 │          │        │                   │                                                         │ xmldom: xmldom: Cross-site scripting via unvalidated element │
+│                   │                │          │        │                   │                                                         │ name injection                                               │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83607                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83608 │          │        │                   │ 0.8.15, 0.9.12                                          │ xmldom: @xmldom/xmldom: xmldom: XML Markup Injection via     │
+│                   │                │          │        │                   │                                                         │ DocType Name Bypass                                          │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83608                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83613 │          │        │                   │                                                         │ xmldom: @xmldom/xmldom: xmldom: Denial of Service due to     │
+│                   │                │          │        │                   │                                                         │ quadratic-time attribute processing                          │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83613                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83614 │          │        │                   │                                                         │ xmldom: @xmldom/xmldom: xmldom: Denial of Service via        │
+│                   │                │          │        │                   │                                                         │ quadratic-time XML parsing                                   │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83614                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83615 │          │        │                   │                                                         │ xmldom: @xmldom/xmldom: xmldom: Denial of Service via        │
+│                   │                │          │        │                   │                                                         │ quadratic memory consumption                                 │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83615                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83616 │          │        │                   │                                                         │ xmldom: xmldom: XML Structure Injection via Unvalidated      │
+│                   │                │          │        │                   │                                                         │ Processing Instruction Targets                               │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83616                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83619 │          │        │                   │ 0.8.15                                                  │ @xmldom/xmldom: xmldom: Denial of Service via crafted XML    │
+│                   │                │          │        │                   │                                                         │ input                                                        │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83619                   │
+│                   ├────────────────┼──────────┤        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83610 │ MEDIUM   │        │                   │ 0.8.15, 0.9.12                                          │ xmldom: @xmldom/xmldom: xmldom: XML fragment injection via   │
+│                   │                │          │        │                   │                                                         │ invalid EntityReference serialization                        │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83610                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-83611 │          │        │                   │                                                         │ xmldom: xmldom: Malformed XML end tag parsing leads to       │
+│                   │                │          │        │                   │                                                         │ content discard and...                                       │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-83611                   │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ brace-expansion   │ CVE-2026-13149 │ HIGH     │        │ 1.1.11            │ 5.0.7, 1.1.16, 2.1.2                                    │ brace-expansion: Brace-expansion: Denial of Service due to   │
+│                   │                │          │        │                   │                                                         │ exponential-time complexity                                  │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-13149                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-14257 │          │        │                   │ 5.0.8, 3.0.3, 2.1.3, 1.1.17                             │ brace-expansion: Brace-expansion: Denial of Service via      │
+│                   │                │          │        │                   │                                                         │ memory exhaustion in expand() function                       │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-14257                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-69152 │          │        │                   │ 1.1.18, 2.1.4, 3.0.6, 5.0.9                             │ brace-expansion: DoS via unbounded intermediate arrays,      │
+│                   │                │          │        │                   │                                                         │ bypassing the CVE-2026-14257 mitigation                      │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-69152                   │
+│                   ├────────────────┼──────────┤        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-33750 │ MEDIUM   │        │                   │ 5.0.5, 3.0.2, 2.0.3, 1.1.13                             │ brace-expansion: brace-expansion: Denial of Service via zero │
+│                   │                │          │        │                   │                                                         │ step value in brace pattern...                               │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-33750                   │
+│                   ├────────────────┼──────────┤        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2025-5889  │ LOW      │        │                   │ 2.0.2, 1.1.12, 3.0.1, 4.0.1                             │ brace-expansion: juliangruber brace-expansion index.js       │
+│                   │                │          │        │                   │                                                         │ expand redos                                                 │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2025-5889                    │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ json5             │ CVE-2022-46175 │ HIGH     │        │ 2.2.1             │ 2.2.2, 1.0.2                                            │ json5: Prototype Pollution in JSON5 via Parse Method         │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2022-46175                   │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ min-document      │ CVE-2025-57352 │ LOW      │        │ 2.19.0            │ 2.19.1                                                  │ min-document: min-document prototype pollution               │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2025-57352                   │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ minimatch         │ CVE-2026-26996 │ HIGH     │        │ 3.1.2             │ 10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3 │ minimatch: minimatch: Denial of Service via specially        │
+│                   │                │          │        │                   │                                                         │ crafted glob patterns                                        │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-26996                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-27903 │          │        │                   │ 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3 │ minimatch: minimatch: Denial of Service due to unbounded     │
+│                   │                │          │        │                   │                                                         │ recursive backtracking via crafted...                        │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-27903                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-27904 │          │        │                   │ 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4 │ minimatch: Minimatch: Denial of Service via catastrophic     │
+│                   │                │          │        │                   │                                                         │ backtracking in glob expressions                             │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-27904                   │
+├───────────────────┼────────────────┼──────────┤        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ react-router      │ CVE-2025-68470 │ MEDIUM   │        │ 6.9.0             │ 6.30.2, 7.9.6                                           │ react-router: React Router unexpected external redirect      │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2025-68470                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-40181 │          │        │                   │ 7.14.1, 6.30.4                                          │ react-router: React Router: Open redirect vulnerability via  │
+│                   │                │          │        │                   │                                                         │ specially crafted URLs                                       │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-40181                   │
+│                   ├────────────────┤          │        │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-53666 │          │        │                   │ 7.18.0                                                  │ react-router: React Router: Information disclosure via       │
+│                   │                │          │        │                   │                                                         │ client-side constructor execution                            │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-53666                   │
+│                   ├────────────────┤          │        │                   │                                                         ├──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2026-53669 │          │        │                   │                                                         │ react-router: React Router: Open Redirect vulnerability via  │
+│                   │                │          │        │                   │                                                         │ backslashes in navigation components                         │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-53669                   │
+├───────────────────┼────────────────┤          │        ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ yaml              │ CVE-2026-33532 │          │        │ 1.10.2            │ 2.8.3, 1.10.3                                           │ yaml: yaml: Denial of Service via deeply nested YAML         │
+│                   │                │          │        │                   │                                                         │ document parsing                                             │
+│                   │                │          │        │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-33532                   │
+└───────────────────┴────────────────┴──────────┴────────┴───────────────────┴─────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────┘
